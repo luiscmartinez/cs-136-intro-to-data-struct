@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        // Employee[] employees = createEmployeeArray(3);
-        // HighestLowest highestLowestEmployees = new HighestLowest(employees);
         Employee[] employees = new Employee[3];
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
