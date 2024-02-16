@@ -10,20 +10,20 @@ class Main {
         Employee[] employees = new Employee[3];
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
-            System.out.println("Collecting Employee " + (i + 1) + " Information");
-            System.out.println("Enter Employee " + (i + 1) + " name:");
+            System.out.println("Collecting Employee" + (i + 1) + " Information");
+            System.out.println("Enter Employee" + (i + 1) + " name:");
             String name = input.nextLine();
-            System.out.println("Please enter Employee " + (i + 1) + " Age:");
+            System.out.println("Please enter Employee" + (i + 1) + " Age:");
             int age = input.nextInt();
             input.nextLine();
             employees[i] = new Employee(name, age);
         }
         City[] cities = new City[3];
         for (int i = 0; i < 3; i++) {
-            System.out.println("Collecting City " + (i + 1) + " Information");
-            System.out.println("Enter City " + (i + 1) + " name:");
+            System.out.println("Collecting City" + (i + 1) + " Information");
+            System.out.println("Enter City" + (i + 1) + " name:");
             String name = input.nextLine();
-            System.out.println("Please enter City " + (i + 1) + " Population:");
+            System.out.println("Please enter City" + (i + 1) + " Population:");
             int population = input.nextInt();
             input.nextLine();
             cities[i] = new City(name, population);
@@ -34,25 +34,6 @@ class Main {
         HighestLowest<City> highestLowestCities = new HighestLowest<City>(cities);
         System.out.println("The city with the highest population is: " + highestLowestCities.getHighest().getName());
         System.out.println("The city with the lowest population is: " + highestLowestCities.getLowest().getName());
-    }
-
-    static Employee[] createEmployeeArray(int arraySize) {
-        Employee[] employees = new Employee[arraySize];
-        Scanner input = new Scanner(System.in);
-        for (int i = 0; i < arraySize; i++) {
-            System.out.println("Collecting Employee " + (i + 1) + " Information");
-
-            System.out.println("Enter Employee " + (i + 1) + " name:");
-
-            String name = input.nextLine();
-
-            System.out.println("Please enter Employee " + (i + 1) + " age:");
-            int age = input.nextInt();
-            input.nextLine();
-
-            employees[i] = new Employee(name, age);
-        }
-        return employees;
     }
 }
 
