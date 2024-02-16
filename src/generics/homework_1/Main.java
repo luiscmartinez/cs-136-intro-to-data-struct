@@ -7,12 +7,20 @@ class Main {
     public static void main(String[] args) {
         // Employee[] employees = createEmployeeArray(3);
         // HighestLowest highestLowestEmployees = new HighestLowest(employees);
-        Employee employee1 = new Employee("Luis", 45);
-        Employee employee2 = new Employee("John", 30);
-        Employee employee3 = new Employee("Jane", 35);
-        Employee[] employees = { employee1, employee2, employee3 };
+        Employee[] employees = new Employee[3];
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Collecting Employee " + (i + 1) + " Information");
+            System.out.println("Enter Employee " + (i + 1) + " name:");
+            String name = input.nextLine();
+            System.out.println("Please enter Employee " + (i + 1) + " Age:");
+            int age = input.nextInt();
+            input.nextLine();
+            employees[i] = new Employee(name, age);
+        }
         HighestLowest<Employee> highestLowestEmployees = new HighestLowest<Employee>(employees);
         System.out.println("The oldest employee is: " + highestLowestEmployees.getHighest().getName());
+        System.out.println("The youngest employee is: " + highestLowestEmployees.getLowest().getName());
     }
 
     static Employee[] createEmployeeArray(int arraySize) {
