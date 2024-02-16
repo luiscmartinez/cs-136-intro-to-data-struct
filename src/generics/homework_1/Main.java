@@ -18,9 +18,22 @@ class Main {
             input.nextLine();
             employees[i] = new Employee(name, age);
         }
+        City[] cities = new City[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Collecting City " + (i + 1) + " Information");
+            System.out.println("Enter City " + (i + 1) + " name:");
+            String name = input.nextLine();
+            System.out.println("Please enter City " + (i + 1) + " Population:");
+            int population = input.nextInt();
+            input.nextLine();
+            cities[i] = new City(name, population);
+        }
         HighestLowest<Employee> highestLowestEmployees = new HighestLowest<Employee>(employees);
         System.out.println("The oldest employee is: " + highestLowestEmployees.getHighest().getName());
         System.out.println("The youngest employee is: " + highestLowestEmployees.getLowest().getName());
+        HighestLowest<City> highestLowestCities = new HighestLowest<City>(cities);
+        System.out.println("The city with the highest population is: " + highestLowestCities.getHighest().getName());
+        System.out.println("The city with the lowest population is: " + highestLowestCities.getLowest().getName());
     }
 
     static Employee[] createEmployeeArray(int arraySize) {
