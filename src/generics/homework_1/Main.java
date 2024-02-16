@@ -71,6 +71,30 @@ class Employee implements Comparable<Employee> {
     }
 }
 
+class City implements Comparable<City> {
+    private String name;
+    private int population;
+
+    public City(String name, int population) {
+        this.name = name;
+        this.population = population;
+    }
+
+    public int compareTo(City o) {
+        if (this.population > o.population) {
+            return 1;
+        } else if (this.population < o.population) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
 // extends also means "implements"
 class HighestLowest<T extends Comparable<T>> {
     private T highest;
