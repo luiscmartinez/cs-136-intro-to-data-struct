@@ -9,7 +9,7 @@ class Main {
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
             System.out.println("Collecting Employee" + (i + 1) + " Information");
-            System.out.println("Enter Employee" + (i + 1) + " name:");
+            System.out.println("Please enter Employee" + (i + 1) + " name:");
             String name = input.nextLine();
             System.out.println("Please enter Employee" + (i + 1) + " Age:");
             int age = input.nextInt();
@@ -19,9 +19,9 @@ class Main {
         City[] cities = new City[3];
         for (int i = 0; i < 3; i++) {
             System.out.println("Collecting City" + (i + 1) + " Information");
-            System.out.println("Enter City" + (i + 1) + " name:");
+            System.out.println("Please enter City" + (i + 1) + " name:");
             String name = input.nextLine();
-            System.out.println("Please enter City" + (i + 1) + " Population:");
+            System.out.println("Please enter City" + (i + 1) + " population:");
             int population = input.nextInt();
             input.nextLine();
             cities[i] = new City(name, population);
