@@ -1,3 +1,4 @@
+// Luis Martinez
 package collections.homework.hw_1;
 
 import java.util.HashMap;
@@ -44,9 +45,11 @@ public class Main {
         Employee employee_1 = new Employee("Eason", 1);
         Employee employee_2 = new Employee("Lisa", 2);
         Employee employee_3 = new Employee("Anna", 3);
-        Employee employee_4 = new Employee("Oliva", 4);
+        Employee employee_4 = new Employee("Olivia", 4);
         Employee employee_5 = new Employee("Madelyn", 5);
         Employee employee_6 = new Employee("Sam", 6);
+        Employee employee_7 = new Employee("Will", 7);
+        Employee employee_8 = new Employee("Johnson", 8);
 
         employeeMap.addEmployee(employee_1);
         employeeMap.addEmployee(employee_2);
@@ -54,15 +57,18 @@ public class Main {
         employeeMap.addEmployee(employee_4);
         employeeMap.addEmployee(employee_5);
         employeeMap.addEmployee(employee_6);
+        employeeMap.addEmployee(employee_7);
+        employeeMap.addEmployee(employee_8);
 
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
 
-            System.out.println("Please enter the employee ID or Negative number to exit: ");
+            System.out.println("Please enter the employee ID or Negative Number to Exit: ");
 
             String userResponse = scanner.nextLine();
             if (userResponse.startsWith("-")) {
+                System.out.print("Exiting the program!");
                 break;
             }
             int id = Integer.parseInt(userResponse);
@@ -70,7 +76,7 @@ public class Main {
             if (employee != null) {
                 System.out.println("This employee is: " + employee.getName());
             } else {
-                System.out.println("This employee does not exist!");
+                System.out.println("This employee id doesn't exist!\n");
             }
         }
     }
