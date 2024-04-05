@@ -37,13 +37,20 @@ public class LinkedList<T> {
         } else {
             Node ref = firstNode;
             int hops = 1;
-            while (ref.next != null && hops < pos - 1) {
-                ref = ref.next;
-                hops++;
+            Node prevNode = ref;
+            if (firstNode.next != null && pos == 1) {
+                newNode.next = firstNode;
+                firstNode = newNode;
+            } else {
+                while (ref.next != null && hops < pos) {
+                    prevNode = ref;
+                    ref = ref.next;
+                    hops++;
+                }
+                prevNode.next = newNode;
+                newNode.next = ref;
             }
-            newNode.next = ref.next;
-            ref.next = newNode;
-            count++;
         }
+        count++;
     }
 }
