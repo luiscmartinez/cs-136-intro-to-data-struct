@@ -28,4 +28,22 @@ public class LinkedList<T> {
         }
         count++;
     }
+
+    public void add(T s, int pos) {
+        Node newNode = new Node(s);
+        if (firstNode.next == null && pos == 1) {
+            newNode.next = firstNode;
+            firstNode = newNode;
+        } else {
+            Node ref = firstNode;
+            int hops = 1;
+            while (ref.next != null && hops < pos - 1) {
+                ref = ref.next;
+                hops++;
+            }
+            newNode.next = ref.next;
+            ref.next = newNode;
+            count++;
+        }
+    }
 }

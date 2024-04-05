@@ -8,5 +8,8 @@ public class LinkedListDemo {
         myList.add("Chuck");
         myList.add("Daisy");
         System.out.println(myList);
+
+        myList.add("Eve", 1);
+        System.out.println(myList);
     }
 }
