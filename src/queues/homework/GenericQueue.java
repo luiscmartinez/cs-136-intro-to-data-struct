@@ -22,6 +22,7 @@ class GenericQueue<T> {
             tail.next = newNode;
             tail = newNode;
         }
+        length++;
     }
 
     public T dequeue() {
