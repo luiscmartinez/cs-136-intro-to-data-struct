@@ -1,5 +1,7 @@
 package linked_list.lab.linked_stack;
 
+import java.util.EmptyStackException;
+
 /*
     This program demonstrates how to write and 
     use a stack class based on linked lists.
